@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computational Biology: Using computational methods to analyze biological data.</title>
+</head>
+<header>
+    <div class="navBar">
+        <img src="Logo.png" alt="Logo.png" class="logo">
+        <button class="home" onclick="homePage()"><h3>HOME</h3></button>
+        <button class="computational" onclick="meth()"><h3>METHODS</h3></button>
+        <button class="gDA" onclick="services()"><h3>SERVICES</h3></button>
+        <button class="structural" onclick="contacts()"><h3>CONTACTS</h3></button>
+    </div>
+</header>    
+<body>
+    <div class="text">
+        <h1 id="title">Contacts</h1>
+    </div>    
+
+    <div class="contents">
+
+        <div class="imageGroup">
+            <img id="hgp" src="contact.jpg" alt="img1">
+        </div>
+        <h1>Tersona, Radjie C.</h1>
+        
+        <!-- Login and Signup Forms -->
+        <div class="form-box">
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>Don't have an account? <a href="#" onclick="switchToRegister()">Sign Up</a></span>
+                    <header>Login</header>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username or Email">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Sign In" onclick="login()">
+                </div>
+            </div>
+            <div class="register-container" id="register" style="display: none;">
+                <div class="top">
+                    <span>Have an account? <a href="#" onclick="switchToLogin()">Login</a></span>
+                    <header>Sign Up</header>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Firstname">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Lastname">
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register" onclick="register()">
+                </div>
+            </div>
+        </div>
+        <!-- End of Login and Signup Forms -->
+    </div>    
+</body>
+
+<script>
+    function homePage(){
+        window.location.replace("index.html");
+    }
+
+    function meth(){
+        window.location.replace("methods.html");
+    }
+
+    function services(){
+        window.location.replace("services.html");
+    }
+
+    function contacts(){
+        window.location.replace("contacts.html");
+    }
+
+    function login() {
+        // Add your login logic here
+        alert("Login functionality will be implemented here.");
+    }
+
+    function register() {
+        // Add your register logic here
+        alert("Registration functionality will be implemented here.");
+    }
+
+    function switchToRegister() {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("register").style.display = "block";
+    }
+
+    function switchToLogin() {
+        document.getElementById("register").style.display = "none";
+        document.getElementById("login").style.display = "block";
+    }
+</script>
+
+<style>
+    /* Your existing CSS styles */
+
+    /* Add styles for login and signup forms */
+    .form-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 512px;
+        height: 420px;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .login-container, .register-container {
+        position: absolute;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        transition: .5s ease-in-out;
+    }
+
+    /* End of added styles */
+</style>
+</html>
